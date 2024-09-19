@@ -63,3 +63,45 @@ body {
         color: white !important;
     }
 }
+
+.tituloburguer{
+    color: white;
+    margin: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.card{
+    border-radius: 15px;
+    margin: auto;
+}
+
+.hamburguesas {
+    padding: 30px;
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* Estilos para dispositivos pequeños (móviles) */
+@media (max-width: 600px) {
+    .hamburguesas {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hamburguesas {
+        justify-content: space-around;
+    }
+}
+
+/* Estilos para laptops y desktops */
+@media (min-width: 1025px) {
+    .hamburguesas {
+        justify-content: space-between;
+    }
+}
