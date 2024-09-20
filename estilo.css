@@ -64,7 +64,7 @@ body {
     }
 }
 
-.tituloburguer{
+.tituloburguer {
     color: white;
     margin: 60px;
     display: flex;
@@ -72,12 +72,12 @@ body {
     justify-content: center;
 }
 
-.card{
+.card {
     border-radius: 15px;
     margin: auto;
 }
 
-.hamburguesas {
+.hamburguesas, .bebidas {
     padding: 30px;
     display: flex;
     gap: 5px;
@@ -86,7 +86,7 @@ body {
 
 /* Estilos para dispositivos pequeños (móviles) */
 @media (max-width: 600px) {
-    .hamburguesas {
+    .hamburguesas, .bebidas {
         flex-direction: column;
         align-items: center;
     }
@@ -94,14 +94,67 @@ body {
 
 /* Estilos para tablets */
 @media (min-width: 601px) and (max-width: 1024px) {
-    .hamburguesas {
+    .hamburguesas, .bebidas {
         justify-content: space-around;
     }
 }
 
 /* Estilos para laptops y desktops */
 @media (min-width: 1025px) {
-    .hamburguesas {
+    .hamburguesas, .bebidas {
         justify-content: space-between;
     }
 }
+
+body h1 {
+    margin: 0;
+    padding-bottom: 6rem;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-family: 'Teko', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+    text-align: center;
+    margin-top: 50px;
+}
+
+body a {
+    font-family: 'Teko', sans-serif;
+    color: #4db1bc;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    justify-self: center;
+    padding-bottom: 1rem;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px #2d9da9;
+    }
+
+    to {
+        text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+    }
+}
+
+body h2 {
+    margin: 0;
+    padding-bottom: 6rem;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-family: 'Teko', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.one, .two, .three, .four, .five, .six, .seven{
+    color: white;
+}
+
