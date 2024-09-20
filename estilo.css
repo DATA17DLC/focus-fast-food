@@ -4,66 +4,6 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* Estilos generales para la barra de navegación */
-
-.navbar-brand,
-.navbar-nav .nav-link {
-    color: rgb(255, 255, 255) !important;
-    /* Color blanco para el texto */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Estilos cuando el menú está colapsado (en dispositivos móviles) */
-.navbar-toggler {
-    border-color: white;
-    /* Borde blanco para el botón del menú */
-}
-
-.navbar-toggler-icon {
-    background-color: transparent;
-    /* Fondo transparente para el ícono */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    /* Ícono de hamburguesa en blanco */
-}
-
-/* Estilos para pantallas grandes (más de 768px) */
-@media (min-width: 768px) {
-    .navbar-nav {
-        display: flex;
-        justify-content: center;
-        /* Centrar el menú */
-        align-items: center;
-        text-align: center;
-        margin: auto !important;
-    }
-
-    .navbar-nav .nav-link {
-        padding: 15px;
-        color: white !important;
-    }
-}
-
-/* Estilos para dispositivos móviles (pantallas de menos de 768px) */
-@media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
-        /* Centrar enlaces en pantallas pequeñas */
-    }
-
-    .navbar-nav .nav-link {
-        padding: 10px;
-        color: white !important;
-        /* Asegura que el color del texto siga siendo blanco */
-    }
-
-    .navbar-brand {
-        color: white !important;
-    }
-}
-
 .tituloburguer {
     color: white;
     margin: 60px;
