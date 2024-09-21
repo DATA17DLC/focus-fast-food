@@ -1,10 +1,19 @@
+*{
+    scroll-behavior: smooth;
+}
 body {
     background-image: url(https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?cs=srgb&dl=pexels-pixabay-260922.jpg&fm=jpg);
     background-size: cover;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.tituloburguer {
+.tituloaurum {
+    display: flex;
+    margin-left: 20px;
+}
+
+.tituloburguer,
+.eslogan {
     color: white;
     margin: 60px;
     display: flex;
@@ -17,7 +26,8 @@ body {
     margin: auto;
 }
 
-.hamburguesas, .bebidas {
+.hamburguesas,
+.bebidas {
     padding: 30px;
     display: flex;
     gap: 5px;
@@ -26,7 +36,9 @@ body {
 
 /* Estilos para dispositivos pequeños (móviles) */
 @media (max-width: 600px) {
-    .hamburguesas, .bebidas {
+
+    .hamburguesas,
+    .bebidas {
         flex-direction: column;
         align-items: center;
     }
@@ -34,14 +46,18 @@ body {
 
 /* Estilos para tablets */
 @media (min-width: 601px) and (max-width: 1024px) {
-    .hamburguesas, .bebidas {
+
+    .hamburguesas,
+    .bebidas {
         justify-content: space-around;
     }
 }
 
 /* Estilos para laptops y desktops */
 @media (min-width: 1025px) {
-    .hamburguesas, .bebidas {
+
+    .hamburguesas,
+    .bebidas {
         justify-content: space-between;
     }
 }
@@ -94,7 +110,136 @@ body h2 {
     margin-top: 50px;
 }
 
-.one, .two, .three, .four, .five, .six, .seven{
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven {
     color: white;
 }
 
+.mapa {
+    margin: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+/* From Uiverse.io by MijailVillegas */
+.cardsocial {
+    margin: auto;
+    max-width: fit-content;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+    backdrop-filter: blur(15px);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+        inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
+    transition: 0.5s;
+}
+
+.cardsocial:hover {
+    animation: ease-out 5s;
+    background: rgba(173, 173, 173, 0.05);
+}
+
+.cardsocial ul {
+    padding: 1rem;
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card ul li {
+    cursor: pointer;
+}
+
+.svg {
+    transition: all 0.3s;
+    /* if you find some problems change w - h : 30px*/
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    color: rgb(255, 174, 0);
+    fill: currentColor;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+        inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.text {
+    opacity: 0;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.3s;
+    color: rgb(255, 174, 0);
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    z-index: 9999;
+    box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),
+        -10px 0 1px rgba(153, 153, 153, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.3),
+        inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.082);
+}
+
+/*isometric prooyection*/
+.iso-pro {
+    transition: 0.5s;
+}
+
+.iso-pro:hover a>.svg {
+    transform: translate(15px, -15px);
+    border-radius: 100%;
+}
+
+.iso-pro:hover .text {
+    opacity: 1;
+    transform: translate(25px, -2px) skew(-5deg);
+}
+
+.iso-pro:hover .svg {
+    transform: translate(5px, -5px);
+}
+
+.iso-pro span {
+    opacity: 0;
+    position: absolute;
+    color: #1877f2;
+    border-color: #1877f2;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+        inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+    border-radius: 50%;
+    transition: all 0.3s;
+    height: 60px;
+    width: 60px;
+}
+
+.iso-pro:hover span {
+    opacity: 1;
+}
+
+.iso-pro:hover span:nth-child(1) {
+    opacity: 0.2;
+}
+
+.iso-pro:hover span:nth-child(2) {
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+}
+
+.iso-pro:hover span:nth-child(3) {
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+}
